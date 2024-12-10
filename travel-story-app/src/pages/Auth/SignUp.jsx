@@ -107,7 +107,7 @@ const SignUp = () => {
               CREATE ACCOUNT
             </button>
 
-            <p className="text-xs text-slate-500 text-center my-4">Or</p>
+            <p className="text-xs text-slate-500 text-center my-1">Or</p>
 
             <button
               type="submit"

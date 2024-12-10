@@ -57,7 +57,7 @@ const Login = () => {
       <div className="container h-screen flex flex-col-reverse lg:flex-row items-center justify-center lg:px-20 mx-auto">
         <div className="lg:w-2/4 w-[85%] lg:h-[90vh] h-[40vh] flex items-end bg-login-bg-img bg-cover bg-center rounded-lg p-10 z-50">
           <div>
-            <h4 className="text-5xl text-white font-semibold leading-[58px]">
+            <h4 className="text-3xl md:text-4xl lg:text-5xl text-white font-semibold leading-[58px]">
               Capture Your <br /> Journeys
             </h4>
             <p className="text-white text-[15px] mt-4 pr-7 leading-6">
