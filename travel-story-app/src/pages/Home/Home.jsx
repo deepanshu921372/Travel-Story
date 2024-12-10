@@ -218,9 +218,9 @@ const Home = () => {
           }}
         />
         <div className="flex gap-7 flex-col-reverse items-center  lg:items-start justify-center lg:flex-row">
-          <div className="flex-1 flex justify-center items-center">
+          <div className="flex-1 flex justify-center w-[85%] md:w-full lg:w-full items-center">
             {allStories.length > 0 ? (
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 w-[80%] md:w-full lg:w-full gap-4">
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 w-full gap-4">
                 {allStories.map((item) => {
                   return (
                     <TravelStoryCard
