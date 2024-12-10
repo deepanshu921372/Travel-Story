@@ -14,7 +14,7 @@ const TravelStoryCard = ({
   onFavouriteClick,
 }) => {
   return (
-    <div className="border rounded-lg overflow-hidden bg-white hover:shadow-lg hover:shadow-slate-200 transition-all ease-in-out relative duration-300 cursor-pointer">
+    <div className="w-full border rounded-lg overflow-hidden bg-white hover:shadow-lg hover:shadow-slate-200 transition-all ease-in-out relative duration-300 cursor-pointer">
       <img
         src={imgUrl}
         alt={title}

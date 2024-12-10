@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import PasswordInput from "../../components/input/PasswordInput.jsx";
 import axiosInstance from "../../utils/axiosInstance";
+import { validateEmail } from "../../utils/helper.js";
 
 const SignUp = () => {
   const navigate = useNavigate();

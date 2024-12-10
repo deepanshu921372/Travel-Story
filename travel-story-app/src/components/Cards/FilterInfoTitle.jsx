@@ -19,7 +19,7 @@ const FilterInfoTitle = ({ filterType, filterDate, onClear }) => {
 
   return (
     filterType && (
-      <div className="mb-5">
+      <div className="mb-5 ml-2">
         {filterType === "search" ? (
           <h3 className="text-lg font-medium">Search Results</h3>
         ) : (
