@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import PasswordInput from "../../components/Input/PasswordInput.jsx";
+import PasswordInput from "../../components/input/PasswordInput.jsx";
 import axiosInstance from "../../utils/axiosInstance";
 
 const SignUp = () => {
