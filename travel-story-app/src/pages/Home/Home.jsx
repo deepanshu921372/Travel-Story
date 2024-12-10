@@ -26,6 +26,7 @@ const Home = () => {
   const [filterType, setFilterType] = useState("");
 
   const [dateRange, setDateRange] = useState({ from: null, to: null });
+  const [isLoading, setIsLoading] = useState(false);
 
   const [openAddEditModel, setOpenAddEditModel] = useState({
     isShown: false,
@@ -53,6 +54,7 @@ const Home = () => {
   };
 
   const getAllTravelStories = async () => {
+    setIsLoading(true);
     try {
       const response = await axiosInstance.get("/get-all-stories");
       if (response.data && response.data.stories) {
@@ -63,6 +65,8 @@ const Home = () => {
         "An error occurred while fetching all travel stories:",
         error
       );
+    } finally {
+      setIsLoading(false);
     }
   };
 
@@ -121,6 +125,7 @@ const Home = () => {
   };
 
   const onSearchStory = async (query) => {
+    setIsLoading(true);
     try {
       const response = await axiosInstance.get("/search", {
         params: {
@@ -135,6 +140,8 @@ const Home = () => {
     } catch (error) {
       console.error("Error in deleteTravelStory:", error);
       toast.error(error.response?.data?.message || "Failed to Search story");
+    } finally {
+      setIsLoading(false);
     }
   };
 
@@ -144,6 +151,7 @@ const Home = () => {
   };
 
   const filterStoriesByDate = async (day) => {
+    setIsLoading(true);
     try {
       const startDate = day.from ? moment(day.from).valueOf() : null;
       const endDate = day.to ? moment(day.to).valueOf() : null;
@@ -166,9 +174,10 @@ const Home = () => {
       toast.error(
         error.response?.data?.message || "Failed to filter stories by date"
       );
+    } finally {
+      setIsLoading(false);
     }
   };
-
   const handleDayClick = (day) => {
     setDateRange(day);
     filterStoriesByDate(day);
@@ -188,6 +197,11 @@ const Home = () => {
 
   return (
     <>
+      {isLoading && (
+        <div className="loader-container">
+          <div className="spinner"></div>
+        </div>
+      )}
       <Navbar
         userInfo={userInfo}
         searchQuery={searchQuery}
