@@ -217,10 +217,10 @@ const Home = () => {
             resetFilter();
           }}
         />
-        <div className="flex gap-7">
-          <div className="flex-1">
+        <div className="flex gap-7 flex-col-reverse items-center  lg:items-start justify-center lg:flex-row">
+          <div className="flex-1 flex justify-center items-center">
             {allStories.length > 0 ? (
-              <div className="grid grid-cols-2 gap-4">
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 w-[80%] md:w-full lg:w-full gap-4">
                 {allStories.map((item) => {
                   return (
                     <TravelStoryCard
@@ -244,7 +244,7 @@ const Home = () => {
               />
             )}
           </div>
-          <div className="w-[350px]">
+          <div className="w-[350px] ">
             <div className="bg-white border border-slate-200 shadow-lg shadow-slate-200/60 rounded-lg">
               <div className="p-3">
                 <DayPicker
@@ -310,7 +310,7 @@ const Home = () => {
       </Modal>
 
       <button
-        className="w-16 h-16 flex items-center justify-center rounded-full bg-primary hover:bg-cyan-400 fixed right-10 bottom-10"
+        className="w-10 h-10 md:w-16 md:h-16 lg:w-16 lg:h-16  flex items-center justify-center rounded-full bg-primary hover:bg-cyan-400 fixed right-5 md:right-10 lg:right-10 bottom-5 md:bottom-10 lg:bottom-10 "
         onClick={() => {
           setOpenAddEditModel({
             isShown: true,
@@ -319,7 +319,7 @@ const Home = () => {
           });
         }}
       >
-        <MdAdd className="text-[32px] text-white" />
+        <MdAdd className="text-[20px] md:text-[32px] lg:text-[32px] text-white" />
       </button>
 
       <ToastContainer />
