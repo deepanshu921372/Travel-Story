@@ -60,8 +60,8 @@ const SignUp = () => {
     <div className="h-screen bg-cyan-50 overflow-hidden relative">
       <div className="login-ui-box right-10 -top-40" />
       <div className="login-ui-box bg-cyan-200 -bottom-40 right-1/2" />
-      <div className="container h-screen flex items-center justify-center px-20 mx-auto">
-        <div className="w-2/4 h-[90vh] flex items-end bg-signup-bg-img bg-cover bg-center rounded-lg p-10 z-50">
+      <div className="container h-screen flex flex-col-reverse lg:flex-row items-center justify-center lg:px-20 mx-auto">
+        <div className="lg:w-2/4 w-[85%] lg:h-[90vh] h-[50vh] flex items-end bg-signup-bg-img bg-cover bg-center rounded-lg p-10 z-50">
           <div>
             <h4 className="text-5xl text-white font-semibold leading-[58px]">
               Join the <br /> Adventure
@@ -72,7 +72,7 @@ const SignUp = () => {
             </p>
           </div>
         </div>
-        <div className="w-2/4 h-[75vh] bg-white rounded-r-lg relative p-16 shadow-cyan-200/20">
+        <div className="lg:w-2/4 w-[85%] lg:h-[75vh] h-[40vh] bg-white rounded-r-lg relative p-6 lg:p-16 shadow-cyan-200/20">
           <form onSubmit={handleSignUp}>
             <h4 className="text-2xl font-semibold mb-7">Sign Up</h4>
             <input
